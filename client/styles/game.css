@@ -1,0 +1,30 @@
+#game {
+    background-color: var(--game-bg);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#game > canvas {
+    position: relative;
+}
+
+#gameArea {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#gameStats {
+    width: 7em;
+    margin-left: 2em;
+    justify-content: center;
+}
+
+#gameStats input[type=range] {
+    width: 100%
+}
+
+#gameStats h1, #gameStats h2, #gameStats h3 {
+    padding: 0;
+    margin: 0;
+}

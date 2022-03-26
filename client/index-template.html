@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Template</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic@6.5.4/picnic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.54.0/phaser.min.js"></script>
+    <!--Insert dependencies here-->
+</head>
+<body>
+    <div id="content">
+        <div id="header" class="header">
+            <h1>This is a Node.Js Game Template</h1>
+        </div>
+        <div id="overview" class="mainContent flexRow">
+            <div class="overviewColumn">
+                <div class="flexRow">
+                    <h2 class="overviewHeader">Open Lobbies</h2>
+                    <input id="overviewUsername" type="text" placeholder="Username">
+                </div>
+                <div id="overviewList" class="flexColumn overviewContent scrollContainer"></div>
+                <div id="createOverviewRow" class="flexRow overviewFooter">
+                    Create your own Game <input id="overviewName" type="text" placeholder="Name" maxlength="32">
+                    <button id="createOverview">Create</button>
+                </div>
+            </div>
+            <div id="highscore" class="overviewColumn flexColumn">
+                <h2 class="overviewHeader">Highscores</h2>
+                <div id="highscoreList" class="flexColumn overviewContent scrollContainer"></div>
+            </div>
+        </div>
+        <div id="lobby" class="mainContent flexRow" style="display: none;">
+            <div class="lobbyColumn">
+                <div class="flexRow">
+                    <h2 id="lobbyName">Lobby Title</h2>
+                    <input id="lobbyUsername" type="text" placeholder="Username">
+                </div>
+                <button id="lobbyLeave">Leave Lobby</button>
+                <div id="lobbyList"></div>
+                <div id="lobbyFooter">
+                    <button id="lobbyStart">start Game</button>
+                </div>
+            </div>
+            <div id="lobbyDetails" class="lobbyColumn">
+                <div id="avatarSelect" class="flexRow">
+                </div>
+                <div id="lobbyLevel" class="flexColumn">
+                    <select id="levelSelect">
+                    </select>
+                    <img id="levelPreview">
+                </div>
+            </div>
+        </div>
+        <div id="game" class="mainContent flexColumn" style="display: none;">
+            <div class="flexRow">
+                <h2 id=phaseTitle></h2>
+                <h2 id=phaseCountdown></h2>
+            </div>
+            <div id="gameArea">
+                <div id="gameStats" class="flexColumn">
+                    <h1>Points</h1>
+                    <h3 id="score">0</h3>
+                    <label class="flexRow">
+                        <input id="debugCbx" type="checkbox">
+                        <span class="checkable">Debug</span>
+                    </label>
+                    <span>Music Volume</span>
+                    <input id="musicVolume" type="range" min="0" max="100" value="20">
+                    <span>Sound Volume</span>
+                    <input id="soundVolume" type="range" min="0" max="100" value="70">
+                </div>
+            </div>
+            <div id="gameResults" class="flexColumn">
+                <h2>Results</h2>
+                <div id="gameResultsList"></div>
+                <div class="flexRow buttonRow">
+                    <button id="gameBack">Back to Lobby</button>
+                    <button id="gameNext">Next Game</button>
+                    <button id="gameQuit">Quit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="logoff" class="flexColumn" style="display: none;">
+        <div class="flexRow">
+            Your Connection was closed due to Inactivity<br>
+            Please reload the Page
+        </div>
+    </div>
+    <script
+        data-label="Check out the GitHub repository!"
+        data-href="https://github.com/H0rn0chse/node-game-template"
+        data-target="_blank"
+        src="https://unpkg.com/github-corners@latest/dist/embed.min.js">
+    </script>
+    <div id="acknowledgements" title="Acknowledgements"></div>
+</body>
+</html>
